@@ -1,4 +1,4 @@
-package com.example.shezh_project
+package com.example.pokedex_samaritan
 
 import org.junit.Test
 

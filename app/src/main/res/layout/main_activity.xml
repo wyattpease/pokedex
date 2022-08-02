@@ -10,67 +10,56 @@
 
     <data>
         <variable
-            name="UserSearchViewModel"
-            type="com.example.shezh_project.view_models.UserSearchViewModel" />
+            name="PokemonViewModel"
+            type="com.example.pokedex_samaritan.view_models.PokemonViewModel" />
     </data>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:contentDescription="@string/app_name"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/pokedex_logo" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:descendantFocusability="afterDescendants"
+                app:layout_constraintStart_toEndOf="@+id/logo" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/shezh_green"
-        android:foregroundTint="#1BAE79"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:context=".MainActivity"
-        tools:ignore="ExtraText"><![CDATA[
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Github username" />
-        ]]>
-
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="10dp"
-            android:foregroundTint="#E4B223"
-            android:gravity="top"
-            android:hint="@string/search_hint"
-            android:inputType="text"
-            android:paddingTop="40dp"
-            android:singleLine="true"
-            android:text="@={UserSearchViewModel.username}"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/get_repo_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal"
-            android:backgroundTint="#E4B223"
-            android:text="@string/get_repos"
-            android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:background="@color/shezh_green"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@+id/get_repo_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </LinearLayout>
-
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="68dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/pokeball"
+                    android:backgroundTint="@android:color/transparent"
+                    android:contentDescription="@string/view_captured_pokemon"
+                    android:scaleType="center"
+                    app:borderWidth="0dp"
+                    app:elevation="0dp"
+                    app:maxImageSize="70dp"
+                    app:rippleColor="@android:color/transparent"
+                    app:srcCompat="@drawable/pokeball"
+                    app:tint="@null"
+                    tools:layout_editor_absoluteX="339dp"
+                    tools:layout_editor_absoluteY="636dp"
+                    tools:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
 </layout>
 
 

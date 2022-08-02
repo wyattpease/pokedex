@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Github Repo Search</string>
-    <string name="search_hint">Github Username…</string>
-    <string name="get_repos">Get Repos</string>
+    <string name="about">About</string>
+    <string name="base_stats">Base Stats</string>
+    <string name="capture">Capture</string>
+    <string name="captured_date">Captured Date</string>
+    <string name="captured_level">Captured Level</string>
+    <string name="nickname">Nickname</string>
+    <string name="captured_pokemon">Captured Pokemon</string>
+    <string name="view_captured_pokemon">View Captured Pokemon</string>
 </resources>

@@ -1,13 +1,14 @@
-package com.example.shezh_project.view_models
+package com.example.pokedex_samaritan.view_models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import java.lang.IllegalArgumentException
 
-class UserSearchViewModelFactory : ViewModelProvider.Factory{
+@Suppress("UNCHECKED_CAST")
+class PokemonViewModelFactory : ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if(modelClass.isAssignableFrom(UserSearchViewModel::class.java)){
-            return UserSearchViewModel() as T
+        if(modelClass.isAssignableFrom(PokemonViewModel::class.java)){
+            return PokemonViewModel() as T
         }
         throw IllegalArgumentException ("UnknownViewModel")
     }
